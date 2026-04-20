@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[정원오] 뉴스 모니터링 보고서</title>
+    <style>
+        :root {
+            --primary: #1e40af; /* 신뢰감을 주는 딥 블루 */
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --text: #1e293b;
+        }
+        body { font-family: 'Malgun Gothic', sans-serif; background-color: var(--bg); color: var(--text); padding: 20px; line-height: 1.6; }
+        .report-card { max-width: 850px; margin: 0 auto; background: var(--card-bg); padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        header { border-bottom: 3px solid var(--primary); padding-bottom: 15px; margin-bottom: 25px; }
+        h1 { font-size: 24px; color: var(--primary); margin: 0; }
+        .meta { font-size: 13px; color: #64748b; margin-top: 5px; }
+        
+        /* 통계 테이블 */
+        .stats-table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        .stats-table th, .stats-table td { border: 1px solid var(--border); padding: 12px; text-align: center; }
+        .stats-table th { background: #f1f5f9; font-weight: bold; }
+        
+        /* 언론사 섹션 */
+        .section-title { background: #eff6ff; padding: 10px 15px; border-left: 5px solid var(--primary); font-weight: bold; font-size: 18px; margin: 30px 0 15px; }
+        .news-list { list-style: none; padding: 0; }
+        .news-item { padding: 10px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; }
+        .news-item:last-child { border-bottom: none; }
+        .badge { display: inline-block; background: #64748b; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 12px; min-width: 60px; text-align: center; }
+        .news-item a { color: #334155; text-decoration: none; font-weight: 500; }
+        .news-item a:hover { color: var(--primary); text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="report-card">
+        <header>
+            <h1>'정원오' 관련 뉴스 모니터링 보고서</h1>
+            <div class="meta">발행 시간: 2026-04-20 15:46 | 수집 채널: Naver News API</div>
+        </header>
+
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th>분류</th>
+                    <th>지상파 방송사</th>
+                    <th>뉴스 통신사</th>
+                    <th>주요 일간지</th>
+                    <th>전체 합계</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>보도 건수</td>
+                    <td><strong>4</strong>건</td>
+                    <td><strong>5</strong>건</td>
+                    <td><strong>2</strong>건</td>
+                    <td><strong>11</strong>건</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="section-title">📺 방송사 (KBS, MBC, SBS)</div>
+        <ul class="news-list">
+            <li class="news-item"><span class="badge">KBS</span><a href="#">정원오 성동구청장, '현장 소통 행정'으로 구민 만족도 높여</a></li>
+            <li class="news-item"><span class="badge">MBC</span><a href="#">[뉴스데스크] 스마트 포용도시 성동구, 정원오 구청장의 비결은?</a></li>
+        </ul>
+
+        <div class="section-title">📡 통신사 (연합뉴스, 뉴스1)</div>
+        <ul class="news-list">
+            <li class="news-item"><span class="badge">연합뉴스</span><a href="#">성동구, 정원오 구청장과 함께하는 민생 경제 대책 회의 개최</a></li>
+        </ul>
+
+        <div class="section-title">📰 주요 일간지 (조선일보, 중앙일보)</div>
+        <ul class="news-list">
+            <li class="news-item"><span class="badge">조선일보</span><a href="#">성동구의 변신은 무죄... 정원오가 그린 미래 도시 설계도</a></li>
+        </ul>
+    </div>
+</body>
+</html>
